@@ -309,22 +309,25 @@
                            <div class="col-sm-12 col-md-10 offset-lg-1">
                               <div class="full contact_form">
                                  <a name="formulario"></a>
-                                 <form class="contact_form_inner" action="#">
-                                    <fieldset>
-                                       <div class="field">
-                                          <input type="text" name="name" placeholder="nombre" />
-                                       </div>
-                                       <div class="field">
-                                          <input type="email" name="email" placeholder="Email" />
-                                       </div>
-                                       <div class="field">
-                                          <input type="text" name="phone_no" placeholder="Telefono" />
-                                       </div>
-                                       <div class="field">
-                                          <textarea placeholder="Message"></textarea>
-                                       </div>
-                                       <div class="field center">
-                                          <button class="margin-top_30">SEND</button>
+                                 <form action="form-process.php" method="post" class="form_contact">
+                                 <h2>Envia un mensaje</h2>    
+                                 <fieldset>
+                                       <label for="names">Nombres *</label>
+                                       <input type="text" id="names" name="Nombre" required>
+                                       
+                                       <label for="phone">Teléfono / Celular *</label>
+                                       <input type="text" id="phone" name="Telefono" required>
+                                       
+                                       <label for="email">Correo Elctronico *</label>
+                                       <input type="text" id="email" name="Email" required>
+                                       
+                                       <label for="mensaje">Mensaje *</label>
+                                       <textarea id="mensaje" name="Mensaje" required></textarea>
+
+                                          <input type="submit" value="enviar mensaje" id="btnSend">
+
+                                          <div class="field center">
+                                          <button class="margin-top_30">Enviar</button>
                                        </div>
                                     </fieldset>
                                  </form>
